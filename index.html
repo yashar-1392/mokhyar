@@ -255,7 +255,7 @@
             <button type="button" id="model-modal-open-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900 transition text-xs font-semibold">
                 <i class="fa-solid fa-microchip text-indigo-600 dark:text-indigo-400"></i>
                 <span class="hidden xs:inline">مدل:</span>
-                <span id="header-model-name" class="truncate max-w-[110px]">Mokhyar Lite (Free)</span>
+                <span id="header-model-name" class="truncate max-w-[110px]">Lite</span>
             </button>
 
             <button type="button" id="secret-btn" class="p-2 sm:px-3 sm:py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs sm:text-sm font-medium transition flex items-center gap-1" title="چت مخفی">
@@ -415,7 +415,7 @@
 
                                 <button type="button" id="model-modal-open-btn-footer" class="flex items-center gap-1 px-2.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/50 hover:bg-indigo-100 dark:hover:bg-indigo-900 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 rounded-xl text-xs font-semibold shrink-0 mx-1 transition shadow-xs" title="تغییر مدل هوش مصنوعی">
                                     <i class="fa-solid fa-microchip"></i>
-                                    <span id="input-model-name" class="truncate max-w-[110px]">Mokhyar Lite (Free)</span>
+                                    <span id="input-model-name" class="truncate max-w-[110px]">Lite</span>
                                 </button>
 
                                 <textarea id="user-input" rows="1" placeholder="پرسیدن سوال..." 
@@ -835,8 +835,8 @@
 
         const MODELS = [
             { 
-                id: "Mokhyar Lite (Free)", 
-                name: "Mokhyar Lite (Free)", 
+                id: "Lite", 
+                name: "Lite", 
                 cost: 0, 
                 desc: "Excellent for casual conversations, quick searches, and light tasks.",
                 systemInstruction: "You are Mokhyar(مخیار), a general and efficient AI assistant developed by the Mokhyar team. Your role is to provide clear, friendly, well-structured, and high-quality responses even for general or everyday queries. When responding, keep these principles in mind: Always maintain your identity as Mokhyar and keep a warm, welcoming tone. Use rich formatting such as bold text, clear headings, and bullet points for better readability. If the user's query requires data categorization, make sure to use standard Markdown tables. Avoid unnecessary complexity and ensure your responses are practical and easy to grasp."
@@ -917,7 +917,7 @@
 
         let appState = {
             coins: 0,
-            currentModel: "Mokhyar Lite (Free)",
+            currentModel: "Lite",
             currentPersona: "normal",
             isSecretChat: false,
             darkMode: false,
@@ -955,7 +955,7 @@
                 appState.coins = 0;
             }
             if (!MODELS.some(m => m.id === appState.currentModel)) {
-                appState.currentModel = "Mokhyar Lite (Free)";
+                appState.currentModel = "Lite";
             }
             if (!appState.chats || appState.chats.length === 0) {
                 createNewChat(false);
@@ -1313,7 +1313,7 @@
             if (window.confirm("آیا مطمئن هستید که می‌خواهید تمام اطلاعات و گفتگوها را پاک کنید؟")) {
                 localStorage.removeItem('mokhyar_app_state');
                 localStorage.removeItem('telaray_app_state');
-                appState = { coins: 0, currentModel: "Mokhyar Lite (Free)", currentPersona: "normal", isSecretChat: false, darkMode: false, chats: [], activeChatId: null };
+                appState = { coins: 0, currentModel: "Lite", currentPersona: "normal", isSecretChat: false, darkMode: false, chats: [], activeChatId: null };
                 applyTheme();
                 createNewChat();
                 updateUIState();
