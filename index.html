@@ -252,12 +252,6 @@
                 <i class="fa-solid fa-sun hidden dark:inline text-amber-400"></i>
             </button>
 
-            <button type="button" id="model-modal-open-btn" class="flex items-center gap-1.5 px-2.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900 transition text-xs font-semibold">
-                <i class="fa-solid fa-microchip text-indigo-600 dark:text-indigo-400"></i>
-                <span class="hidden xs:inline">مدل:</span>
-                <span id="header-model-name" class="truncate max-w-[110px]">Mokhyar Lite (Free)</span>
-            </button>
-
             <button type="button" id="secret-btn" class="p-2 sm:px-3 sm:py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs sm:text-sm font-medium transition flex items-center gap-1" title="چت مخفی">
                 <i class="fa-solid fa-user-secret text-indigo-600 dark:text-indigo-400"></i>
                 <span class="hidden sm:inline">چت مخفی</span>
@@ -1306,7 +1300,7 @@
         function updateUIState() {
             document.getElementById('user-coins-display').innerText = (appState.coins || 0).toLocaleString('fa-IR');
             document.getElementById('current-model-badge').innerText = appState.currentModel;
-            document.getElementById('header-model-name').innerText = appState.currentModel;
+            //document.getElementById('header-model-name').innerText = appState.currentModel;
             document.getElementById('input-model-name').innerText = appState.currentModel;
             
             document.getElementById('profile-coins-val').innerText = (appState.coins || 0).toLocaleString('fa-IR') + " سکه";
